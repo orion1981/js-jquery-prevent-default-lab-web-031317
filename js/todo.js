@@ -1,5 +1,18 @@
 $(document).ready(function(){
-  // call functions here
+
+  submitForm()
+
 });
 
-// define functions here
+function submitForm(){
+  $('form').submit(function(event){
+    event.preventDefault();
+    console.log("button push")
+    var item = $('#item').val();
+    var listItem = `<li> ${item} </li>`
+
+    $('ol').append(listItem)
+  })
+
+
+}
